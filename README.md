@@ -1,11 +1,12 @@
 # Relatório Técnico: Análise Exploratória de Dados e Estatística Descritiva
 
-[Vinicius Molena] — RM: [571270]
-[Matheus Ferreira] — RM: [569638]
-[Nathan Werner] — RM: [572925]
-[Gabriel Vilas] — RM: [571603]
-[Gustavo Henrique] — RM: [569921]
-[Ricardo Santos] — RM: [569600]
+**Integrantes:**
+* [Vinicius Molena] — RM: [571270]
+* [Matheus Ferreira] — RM: [569638]
+* [Nathan Werner] — RM: [572925]
+* [Gabriel Vilas] — RM: [571603]
+* [Gustavo Henrique] — RM: [569921]
+* [Ricardo Santos] — RM: [569600]
 
 ## 1. Visão Geral do Projeto
 Este relatório apresenta os resultados de uma Análise Exploratória de Dados (EDA) realizada na base de dados corporativa. O objetivo principal deste estudo é extrair padrões comportamentais e financeiros do quadro de funcionários, utilizando visualização de dados e estatística descritiva (análise univariada) através da linguagem Python. 
