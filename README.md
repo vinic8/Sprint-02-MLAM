@@ -7,7 +7,7 @@
 * [Gabriel Vilas] — RM: [571603]
 * [Gustavo Henrique] — RM: [569921]
 * [Ricardo Santos] — RM: [569600]
-* 
+
 ## 1. Introdução e Contexto do Projeto
 Este relatório apresenta uma análise quantitativa e visual da infraestrutura de estações de recarga para Veículos Elétricos (VE). Utilizando técnicas de ciência de dados em ambiente Python, a análise explora o comportamento operacional das estações, padrões de precificação (tarifação) e a capacidade técnica instalada. O objetivo final é transformar dados brutos em decisões de negócios acionáveis para expansão e otimização da rede.
 
