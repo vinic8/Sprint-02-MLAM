@@ -1,4 +1,4 @@
-# Relatório Técnico: Análise Exploratória de Dados e Estatística Descritiva
+# Relatório Técnico: Análise Estratégica da Rede de Estações de Recarga de VE
 
 **Integrantes:**
 * [Vinicius Molena] — RM: [571270]
@@ -7,37 +7,42 @@
 * [Gabriel Vilas] — RM: [571603]
 * [Gustavo Henrique] — RM: [569921]
 * [Ricardo Santos] — RM: [569600]
+* 
+## 1. Introdução e Contexto do Projeto
+Este relatório apresenta uma análise quantitativa e visual da infraestrutura de estações de recarga para Veículos Elétricos (VE). Utilizando técnicas de ciência de dados em ambiente Python, a análise explora o comportamento operacional das estações, padrões de precificação (tarifação) e a capacidade técnica instalada. O objetivo final é transformar dados brutos em decisões de negócios acionáveis para expansão e otimização da rede.
 
-## 1. Visão Geral do Projeto
-Este relatório apresenta os resultados de uma Análise Exploratória de Dados (EDA) realizada na base de dados corporativa. O objetivo principal deste estudo é extrair padrões comportamentais e financeiros do quadro de funcionários, utilizando visualização de dados e estatística descritiva (análise univariada) através da linguagem Python. 
-
-## 2. Metodologia Aplicada
-A análise foi construída utilizando a linguagem **Python**, apoiada pelas bibliotecas `pandas` para manipulação dos dados, e `matplotlib` e `seaborn` para a construção das análises gráficas. O processo foi dividido em duas etapas:
-1. **Análise Visual:** Geração de gráficos de setores, barras, histogramas e boxplots para visualização de distribuições e comparações de categorias.
-2. **Análise Estatística (Univariada):** Cálculo de medidas de tendência central, dispersão e separatrizes para variáveis contínuas cruciais (Salário e Idade).
-
----
-
-## 3. Principais Insights e Resultados (Atividades 01 e 02)
-
-### 3.1. Análises Gráficas (Comportamento Visual)
-* **Distribuição Departamental (Gráfico de Setores):** O gráfico evidenciou a proporção da força de trabalho alocada em cada departamento. Observar essas fatias permite entender onde está concentrado o maior custo operacional (Headcount).
-* **Remuneração vs. Desempenho (Gráfico de Barras):** Ao cruzar a média salarial com as avaliações de desempenho, conseguimos visualizar se a política de meritocracia da empresa está sendo aplicada de forma eficaz na folha de pagamento.
-* **Perfil Etário (Histograma):** A distribuição das idades dos funcionários demonstrou a concentração (pico do sino/curva) da faixa etária da empresa, revelando se a força de trabalho é majoritariamente júnior, plena ou sênior em tempo de vida.
-* **Detecção de Anomalias Salariais (Boxplot):** O boxplot identificou claramente a mediana salarial, o intervalo onde a maioria dos salários está concentrada (caixa central) e permitiu a fácil identificação de *outliers* (pontos fora da curva superior ou inferior) na folha de pagamento.
-
-### 3.2. Análise Estatística Univariada
-Ao aplicarmos a estatística descritiva nas variáveis de Salário e Idade, destacam-se:
-* **Tendência Central:** A média e a mediana próximas indicam uma distribuição relativamente simétrica (pouca distorção por salários de diretoria altíssimos). A moda revelou o valor salarial e a idade mais comuns na corporação.
-* **Dispersão:** O cálculo do Desvio Padrão em relação à média de salários indicou a volatilidade da folha de pagamento. Uma alta amplitude confirmou a distância expressiva entre o menor e o maior salário/idade da empresa.
-* **Separatrizes (Quartis):** A análise demonstrou os "degraus" financeiros e etários da base. O Q1 indicou que 25% da base recebe até `[Inserir Valor do Script]`, enquanto o Q3 revelou a margem que separa o seleto grupo dos 25% mais bem pagos.
+## 2. Metodologia de Análise
+A metodologia aplicada dividiu-se em duas frentes fundamentais:
+1. **Análise Visual Avançada:** Implementação de gráficos setoriais, histogramas, diagramas de barras e diagramas de caixa (Boxplots) via `matplotlib` e `seaborn`.
+2. **Estatística Descritiva Univariada:** Extração matemática exata de tendências centrais (Média, Mediana e Moda), comportamento de dispersão (Variância, Desvio Padrão e Amplitude) e limites de distribuição por meio de medidas separatrizes (Quartiz) para as principais métricas volumétricas e financeiras.
 
 ---
 
-## 4. Geração de Valor e Tomada de Decisão (Conclusão)
+## 3. Principais Insights Obtidos
 
-Os dados levantados neste estudo deixam de ser apenas números e se tornam inteligência de negócios. A partir dos insights extraídos, sugerem-se as seguintes tomadas de decisão para a empresa:
+### 3.1. Análise Visual e Gráfica (Item 01)
+* **Estrutura de Portes (Gráfico de Setores):** Revela a distribuição volumétrica da rede (Pequenas, Médias e Grandes estações). O predomínio de estações de pequeno porte aponta para uma infraestrutura capilarizada (foco em conveniência local), enquanto as macroestações concentram centros de alta velocidade de recarga.
+* **Performance por Canal (Gráfico de Barras):** O cruzamento do *Tipo de Local* com a *Média de Sessões Mensais* comprova que locais voltados ao Comércio/Varejo e Rodovias (Redes de Recarga Dedicadas) possuem uma taxa de utilização significativamente maior se comparados a concessionárias ou prédios públicos.
+* **Gargalo Técnico (Histograma):** A análise de frequências da potência máxima (kW) indica o perfil tecnológico dominante da rede. Um pico em faixas menores expõe a forte presença de carregadores mais lentos (Level 2), delimitando a oportunidade de mercado para investimentos futuros em carregamento ultrarrápido (DC Fast).
+* **Anomalias de Preço (Boxplot):** O diagrama de caixa aplicado à tarifa média (por kWh) revela a estabilidade e a amplitude da estratégia de precificação. A identificação visual de *outliers* na parte superior indica locais onde há alta demanda geográfica e baixa concorrência, permitindo a prática de tarifas premium.
 
-1. **Revisão da Política de Cargos e Salários:** O reconhecimento de *outliers* no Boxplot permite ao RH investigar se funcionários exercendo a mesma função possuem salários absurdamente distantes (risco passivo-trabalhista) ou justificados.
-2. **Direcionamento de Treinamento e Cultura:** Compreender a distribuição de idade (Histograma) e o volume de pessoas em cada departamento (Gráfico de Setores) permite que o setor de Marketing Interno ajuste a comunicação e os benefícios para adequar-se à demografia real da companhia, aumentando a retenção de talentos.
-3. **Validação da Meritocracia:** Se o Gráfico de Barras comprova que as melhores avaliações recebem, de fato, as maiores remunerações médias, o relatório fornece dados concretos para validar que as políticas de incentivo da empresa estão funcionando corretamente, gerando engajamento sustentável.
+### 3.2. Análise Descritiva Univariada (Item 02)
+
+#### Métrica A: Sessões Mensais (Demanda e Volume)
+* **Tendência Central:** A disparidade observada entre a Média e a Mediana sinaliza uma distribuição fortemente assimétrica à direita. Poucas estações de alta performance (pontos em rodovias ou hubs comerciais) elevam artificialmente a média geral, evidenciando o efeito "80/20" no uso da rede.
+* **Dispersão:** Uma alta variância e desvio padrão confirmam que o comportamento da demanda é volátil. A expressiva amplitude mostra que existem estações ociosas que precisam de intervenções de marketing ou realocação de infraestrutura.
+* **Separatrizes:** O Terceiro Quartil (Q3) atua como um limiar de alta performance. As estações que operam acima dessa linha delimitam os padrões ideais de localização que devem ser replicados no plano de expansão.
+
+#### Métrica B: Tarifa Média por kWh (Visão Financeira)
+* **Tendência Central:** A média e a mediana próximas validam um preço de mercado consolidado e estável para a recarga base, funcionando como o ponto de equilíbrio para o planejamento do Retorno sobre o Investimento (ROI).
+* **Dispersão:** O desvio padrão controlado exprime um mercado maduro e competitivo, onde desvios drásticos da média ocorrem apenas em condições exclusivas (ex: exclusividade regional ou velocidade extrema do carregador).
+
+---
+
+## 4. Recomendações Estratégicas para Tomada de Decisão (Geração de Valor)
+
+Com base nas evidências geradas pelo modelo matemático e visual, as seguintes decisões corporativas devem ser priorizadas para maximizar a geração de receita da empresa:
+
+1. **Investimento Focado em Alta Rotação:** Direcionar os aportes de expansão de capital (CapEx) estritamente para o modelo vencedor identificado no gráfico de barras: **Comércio/Varejo e Hubs Comerciais de Conveniência**, onde o giro de clientes (sessões mensais) garante um pay-back acelerado da infraestrutura.
+2. **Upgrade Tecnológico Direcionado:** Migrar estações classificadas no Q1 (25% piores em sessões) de carregadores lentos para rápidos (DC Fast), se a potência de infraestrutura local permitir. A velocidade atrai o cliente corporativo e frotas comerciais que pagam tarifas maiores pelo fator tempo.
+3. **Estratégia Dinâmica de Preço (Dynamic Pricing):** Utilizar os limites das medidas separatrizes e os *outliers* mapeados no Boxplot para implementar preços flexíveis. Estações localizadas em locais com alto tráfego e baixa concorrência podem aplicar margens de lucro superiores às do terceiro quartil, enquanto locais de baixa utilização podem oferecer descontos em horários alternativos para aumentar a ocupação base.
